@@ -1,0 +1,135 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta   charset="utf-8" />
+<title>tinyHeart</title>
+<style type="text/css">
+body{
+	padding-top:10px;
+}
+.all_bg{
+	width:1400px;         
+	height:900px;
+	margin:0px auto;
+	
+	
+}
+#allcanvas{
+	position:relative;
+	width:1400px;
+	height:900px;
+	margin:0px;	
+	}
+	#canvas1{
+		position:absolute;
+		bottom:0；
+		left:0;
+		z-index:1;
+	}
+	#canvas2{
+		position:absolute;
+		bottom:0;
+		left:0;
+		z-index:0;      
+		}.btngroup{
+    position: absolute;
+    z-index: 3;      
+    left: 50%;
+    transform: translateX(-50%);
+    top: 160px;
+}
+.btn {
+    display: block;
+    width: 180px;
+    font-size: 30px;
+    line-height: 50px;
+   /* background-color:#fff;*/
+    color:#FFF;
+    text-align: center;
+    border: 5px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 10px 0px;
+}
+.gameIntroduce{
+    border: 5px solid blue;
+    font-size: 20px;
+    position: absolute;
+    width: 440px;
+    z-index: 4;
+	color:#000;
+    border-radius: 20px;
+    background-color: #CCFFFF; 
+    left: 50%;
+    transform: translateX(-50%);
+	border: 5px solid white;
+    top: 60px;
+    display: none;
+}
+.gameIntroduce .body{
+    padding: 20px;
+    position: relative;
+}
+.gameIntroduce .body .close{
+    position: absolute;
+    top:0px;
+    right: 4px;
+    font-size: 24px;
+    width: 24px;
+    line-height: 24px;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 50%;
+	
+}
+		
+</style>
+<audio controls hidden="hidden" autoplay="autoplay" loop>
+<source src="src/bgmusic.mp3" type="audio/mpeg" />
+</audio>
+</head>
+
+<body>
+	<div class="all_bg">
+    	<div id="allcanvas">
+        <canvas id= "canvas1" width="1400" height="900"></canvas>	
+		<canvas id="canvas2" width="1400" height="900"></canvas>
+
+                      <div class="btngroup">
+                <a class="btn" id="start">开始游戏</a>
+                <a class="btn" id="introduce">游戏介绍</a>
+                      </div>
+            
+            <div class="gameIntroduce " id="gameIntroduce">
+                <div class="body">
+                    <span class='close'>x</span>
+                    
+                       <div class="gamebody">  你需要用鼠标引导大鱼不断捕获果实后将果实喂给小鱼维持小鱼生命，小鱼在一段时间未获得食物将会死亡，游戏将结束。</br>黄色果实为普通果实。</br>蓝色果实为为有毒果实，吃到会减生命，生命减到0则大鱼死亡。</br>绿色果实为加倍果实，得分是普通果实的两倍。
+</br>——————————Made by Zhao ^_~
+                       </div>
+                    
+                </div>
+            </div>
+
+
+
+        </div> 
+     </div>
+        <script type="text/javascript"src="js/main.js"></script>
+         <script type="text/javascript"src="js/commonFunctions.js"></script>
+         <script type="text/javascript"src="js/background.js"></script>
+         <script type="text/javascript"src="js/ane.js"></script>
+         <script type="text/javascript"src="js/fruit.js"></script>
+         <script type="text/javascript"src="js/mom.js"></script>
+         <script type="text/javascript"src="js/coll.js"></script>
+         <script type="text/javascript"src="js/baby.js"></script>
+         <script type="text/javascript"src="js/data.js"></script>
+         <script type="text/javascript"src="js/wave.js"></script>
+         <script type="text/javascript"src="js/halo.js"></script>
+		 <script type="text/javascript"src="js/dust.js"></script>
+       
+</body>
+</html>
